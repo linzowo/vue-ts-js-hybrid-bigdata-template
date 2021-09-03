@@ -11,7 +11,7 @@ module.exports = {
       when you have a large number of pages.
       https://panjiachen.github.io/vue-element-admin-site/guide/advanced/lazy-loading.html
       */
-      plugins: ['dynamic-import-node', 'transform-remove-console']
+      plugins: ['dynamic-import-node']
     },
     production: {
       // 生产环境去除console
