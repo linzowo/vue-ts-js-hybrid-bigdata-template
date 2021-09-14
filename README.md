@@ -12,22 +12,11 @@
 
 ### px转rem
 
-此框架内置了px转rem插件，开发过程中可直接使用设计稿中的px尺寸值进行开发，线上会自动转为rem尺寸。默认使用的是 基于`1920 * 1080`的设计稿进行的处理，如果你要使用其他尺寸的设计稿请替换`项目根目录/postcss.config.js`中的内容
+此框架内置了px转rem插件，开发过程中可直接使用设计稿中的px尺寸值进行开发，线上会自动转为rem尺寸。默认使用的是 基于`1920 * 1080`的设计稿进行的处理，如果你要使用其他尺寸的设计稿请替换`.env.development 和 .env.production`中的内容
 
 ```js
-module.exports = {
-  plugins: {
-    autoprefixer: {},
-    'postcss-pxtorem': {
-      // 根据设计稿的 1/10来取值，默认1920 * 1080 其他尺寸请修改为对应宽度的 1/10
-      rootValue: 192,
-      // 需要被转换的属性
-      propList: ['*'],
-      // 不进行px转换的选择器
-      selectorBlackList: []
-    }
-  }
-}
+// 请修改为对应的尺寸 此处默认取的 1920 / 10
+VUE_APP_ROOT_FONT_SIZE = 192
 ```
 
 
